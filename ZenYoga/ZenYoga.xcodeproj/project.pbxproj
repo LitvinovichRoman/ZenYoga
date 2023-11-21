@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		62EB93C02B0D3A360052EF6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EB93BF2B0D3A360052EF6F /* AppDelegate.swift */; };
+		62EB93C22B0D3A360052EF6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EB93C12B0D3A360052EF6F /* SceneDelegate.swift */; };
+		62EB93C72B0D3A360052EF6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62EB93C52B0D3A360052EF6F /* Main.storyboard */; };
+		62EB93C92B0D3A390052EF6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62EB93C82B0D3A390052EF6F /* Assets.xcassets */; };
+		62EB93CC2B0D3A390052EF6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62EB93CA2B0D3A390052EF6F /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		62EB93BC2B0D3A360052EF6F /* ZenYoga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenYoga.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62EB93BF2B0D3A360052EF6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		62EB93C12B0D3A360052EF6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		62EB93C62B0D3A360052EF6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		62EB93C82B0D3A390052EF6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		62EB93CB2B0D3A390052EF6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		62EB93CD2B0D3A3A0052EF6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62EB93B92B0D3A360052EF6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		62EB93B32B0D3A350052EF6F = {
+			isa = PBXGroup;
+			children = (
+				62EB93BE2B0D3A360052EF6F /* ZenYoga */,
+				62EB93BD2B0D3A360052EF6F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		62EB93BD2B0D3A360052EF6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62EB93BC2B0D3A360052EF6F /* ZenYoga.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62EB93BE2B0D3A360052EF6F /* ZenYoga */ = {
+			isa = PBXGroup;
+			children = (
+				62EB93D32B0D3B0B0052EF6F /* Application */,
+				62EB93DF2B0D3C4E0052EF6F /* Models */,
+				62EB93D52B0D3B390052EF6F /* Views */,
+				62EB93D92B0D3B710052EF6F /* ViewModel */,
+				62EB93DB2B0D3BDD0052EF6F /* Resources */,
+			);
+			path = ZenYoga;
+			sourceTree = "<group>";
+		};
+		62EB93D32B0D3B0B0052EF6F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				62EB93D42B0D3B170052EF6F /* Delegates */,
+				62EB93CD2B0D3A3A0052EF6F /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		62EB93D42B0D3B170052EF6F /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				62EB93BF2B0D3A360052EF6F /* AppDelegate.swift */,
+				62EB93C12B0D3A360052EF6F /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		62EB93D52B0D3B390052EF6F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				62EB93DA2B0D3B820052EF6F /* Cells */,
+				62EB93D72B0D3B530052EF6F /* Controllers */,
+				62EB93D82B0D3B640052EF6F /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		62EB93D72B0D3B530052EF6F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		62EB93D82B0D3B640052EF6F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				62EB93C52B0D3A360052EF6F /* Main.storyboard */,
+				62EB93CA2B0D3A390052EF6F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		62EB93D92B0D3B710052EF6F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				62EB93DE2B0D3C230052EF6F /* Binding */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		62EB93DA2B0D3B820052EF6F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		62EB93DB2B0D3BDD0052EF6F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				62EB93DD2B0D3BFE0052EF6F /* Animation */,
+				62EB93DC2B0D3BF50052EF6F /* Images */,
+				62EB93C82B0D3A390052EF6F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		62EB93DC2B0D3BF50052EF6F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		62EB93DD2B0D3BFE0052EF6F /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		62EB93DE2B0D3C230052EF6F /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Binding;
+			sourceTree = "<group>";
+		};
+		62EB93DF2B0D3C4E0052EF6F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		62EB93BB2B0D3A360052EF6F /* ZenYoga */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62EB93D02B0D3A3A0052EF6F /* Build configuration list for PBXNativeTarget "ZenYoga" */;
+			buildPhases = (
+				62EB93B82B0D3A360052EF6F /* Sources */,
+				62EB93B92B0D3A360052EF6F /* Frameworks */,
+				62EB93BA2B0D3A360052EF6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZenYoga;
+			productName = ZenYoga;
+			productReference = 62EB93BC2B0D3A360052EF6F /* ZenYoga.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62EB93B42B0D3A350052EF6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					62EB93BB2B0D3A360052EF6F = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 62EB93B72B0D3A360052EF6F /* Build configuration list for PBXProject "ZenYoga" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 62EB93B32B0D3A350052EF6F;
+			productRefGroup = 62EB93BD2B0D3A360052EF6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62EB93BB2B0D3A360052EF6F /* ZenYoga */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62EB93BA2B0D3A360052EF6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62EB93CC2B0D3A390052EF6F /* LaunchScreen.storyboard in Resources */,
+				62EB93C92B0D3A390052EF6F /* Assets.xcassets in Resources */,
+				62EB93C72B0D3A360052EF6F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62EB93B82B0D3A360052EF6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62EB93C02B0D3A360052EF6F /* AppDelegate.swift in Sources */,
+				62EB93C22B0D3A360052EF6F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		62EB93C52B0D3A360052EF6F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62EB93C62B0D3A360052EF6F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		62EB93CA2B0D3A390052EF6F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62EB93CB2B0D3A390052EF6F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		62EB93CE2B0D3A3A0052EF6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		62EB93CF2B0D3A3A0052EF6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62EB93D12B0D3A3A0052EF6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W2HCKKQTYD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZenYoga/Application/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = by.product.ZenYoga;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		62EB93D22B0D3A3A0052EF6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W2HCKKQTYD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZenYoga/Application/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = by.product.ZenYoga;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62EB93B72B0D3A360052EF6F /* Build configuration list for PBXProject "ZenYoga" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62EB93CE2B0D3A3A0052EF6F /* Debug */,
+				62EB93CF2B0D3A3A0052EF6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62EB93D02B0D3A3A0052EF6F /* Build configuration list for PBXNativeTarget "ZenYoga" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62EB93D12B0D3A3A0052EF6F /* Debug */,
+				62EB93D22B0D3A3A0052EF6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62EB93B42B0D3A350052EF6F /* Project object */;
+}
