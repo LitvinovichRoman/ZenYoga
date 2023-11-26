@@ -10,7 +10,4 @@ import Foundation
 struct YogaPose: Codable {
     let id: String
     let name: String
-    let sanskritName: String
-    let level: String
-    let description: String
 }
