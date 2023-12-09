@@ -8,6 +8,5 @@
 import Foundation
 
 struct YogaPose: Codable {
-    let id: String
     let name: String
 }

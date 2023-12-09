@@ -8,6 +8,5 @@
 import Foundation
 
 struct YogaCategory: Codable {
-    let id: String
     let name: String
 }

@@ -9,26 +9,19 @@ import Foundation
 import Firebase
 
 class LoginViewModel {
-    var email: String = ""
-    var password: String = ""
-
-    func signIn(completion: @escaping (Error?) -> Void, successHandler: @escaping () -> Void) {
-        guard !email.isEmpty, !password.isEmpty else {
-            completion(NSError(domain: "", code: 400, userInfo: [NSLocalizedDescriptionKey: "Email or password is empty"]))
+    var email: String?
+    var password: String?
+    
+    func login(completion: @escaping (Error?) -> Void) {
+        guard let email = email, !email.isEmpty,
+              let password = password, !password.isEmpty
+        else {
+            completion(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Info is incorrect"]))
             return
         }
-            
-        Auth.auth().signIn(withEmail: email, password: password) { user, error in
-            if let error = error {
-                completion(error)
-            } else if user != nil {
-                successHandler()
-                completion(nil)
-            } else {
-                completion(NSError(domain: "", code: 404, userInfo: [NSLocalizedDescriptionKey: "No such user"]))
-            }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { _, error in
+            completion(error)
         }
     }
 }
-
-

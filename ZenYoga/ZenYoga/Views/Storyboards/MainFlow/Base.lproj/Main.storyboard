@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dm5-HG-uiM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="bz9-pc-zEq">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dm5-HG-uiM" customClass="MainTabBarController" customModule="ZenYoga" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="NS0-h5-p5b"/>
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="VJo-Ww-SL1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.97966903449999998" green="0.97658640149999998" blue="0.9933385253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BoX-M8-M3c" kind="relationship" relationship="viewControllers" id="ayH-Ma-Mv3"/>
+                        <segue destination="weN-mu-4ib" kind="relationship" relationship="viewControllers" id="JG8-4w-IaF"/>
+                        <segue destination="nqe-0P-EVF" kind="relationship" relationship="viewControllers" id="YJv-PD-Sqb"/>
+                        <segue destination="9nP-r5-C4Q" kind="relationship" relationship="viewControllers" id="dfT-YS-8VZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdU-Se-8LF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="-151"/>
+        </scene>
+        <!--Category-->
+        <scene sceneID="wKd-DB-8U6">
+            <objects>
+                <collectionViewController title="Category" id="gOq-k0-4HW" customClass="CategoryCollectionViewController" customModule="ZenYoga" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="91n-jQ-HjX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.98047763109999997" green="0.97616833449999996" blue="0.99215894940000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uBe-w1-1NW">
+                            <size key="itemSize" width="400" height="300"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="CategoriesCell" id="U1r-Yb-HZ9" customClass="CategoriesCollectionViewCell" customModule="ZenYoga" customModuleProvider="target">
+                                <rect key="frame" x="7" y="0.0" width="400" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OqO-rg-lEA">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                                <color key="backgroundColor" red="0.98047763109999997" green="0.97616833449999996" blue="0.99215894940000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="customSize" width="400" height="300"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="gOq-k0-4HW" id="zCW-pr-qt1"/>
+                            <outlet property="delegate" destination="gOq-k0-4HW" id="qkO-0c-6rX"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Yoga categories" id="vXW-Pc-7xU"/>
+                    <connections>
+                        <segue destination="dPP-BT-GEK" kind="show" id="vLo-Po-sme"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="stY-fi-aT5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3115.9420289855075" y="-873.21428571428567"/>
+        </scene>
+        <!--Poses-->
+        <scene sceneID="5Ns-Sa-7Kl">
+            <objects>
+                <collectionViewController title="Poses" id="dPP-BT-GEK" customClass="PosesCollectionViewController" customModule="ZenYoga" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Vxh-mu-T7F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.98047763109999997" green="0.97616833449999996" blue="0.99215894940000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YUK-dw-x5C">
+                            <size key="itemSize" width="392" height="180"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="PosesCell" id="4Pl-Y0-fH6" customClass="PosesCollectionViewCell" customModule="ZenYoga" customModuleProvider="target">
+                                <rect key="frame" x="7" y="0.0" width="400" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gHw-RC-JkP">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="250"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                                <color key="backgroundColor" red="0.98047763109999997" green="0.97616833449999996" blue="0.99215894940000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="customSize" width="400" height="250"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="dPP-BT-GEK" id="VkT-ZE-xfj"/>
+                            <outlet property="delegate" destination="dPP-BT-GEK" id="R5Y-JS-yea"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Yoga poses" id="BNZ-ki-AsO"/>
+                    <connections>
+                        <segue destination="xrw-gq-M6X" kind="show" id="SpF-37-xfV"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NZ5-2K-c3b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3886.9565217391309" y="-873.21428571428567"/>
+        </scene>
+        <!--Poses Detail-->
+        <scene sceneID="t0V-Lw-bAi">
+            <objects>
+                <viewController title="Poses Detail" id="xrw-gq-M6X" customClass="PosesDetailViewController" customModule="ZenYoga" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hDS-FY-ogE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZK-cp-eJz">
+                                <rect key="frame" x="14" y="186" width="386" height="476"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WU3-1Z-Fps" userLabel="Poses Image">
+                                        <rect key="frame" x="47" y="133.5" width="287" height="180.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1o-2i-dMY" userLabel="Poses name label">
+                                        <rect key="frame" x="16" y="97" width="350" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h4D-SS-2RG">
+                                        <rect key="frame" x="47" y="322" width="287" height="4"/>
+                                        <color key="progressTintColor" red="0.98386365180000002" green="0.68445771929999999" blue="0.64264339209999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </progressView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ddW-Fp-MCu">
+                                        <rect key="frame" x="47" y="351" width="287.5" height="34.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ve2-dL-FKl" userLabel="Start button">
+                                                <rect key="frame" x="0.0" y="0.0" width="216.5" height="34.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Start">
+                                                    <color key="baseBackgroundColor" red="0.1677889182143886" green="0.53746730998411019" blue="0.19942225541965261" alpha="0.33794708251953126" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEs-qH-lTT" userLabel="Timer label">
+                                                <rect key="frame" x="241.5" y="0.0" width="46" height="34.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="t1o-2i-dMY" firstAttribute="top" secondItem="MZK-cp-eJz" secondAttribute="top" constant="97" id="3H8-wc-sw7"/>
+                                    <constraint firstAttribute="trailing" secondItem="h4D-SS-2RG" secondAttribute="trailing" constant="52" id="CwM-Kd-kXT"/>
+                                    <constraint firstItem="t1o-2i-dMY" firstAttribute="leading" secondItem="MZK-cp-eJz" secondAttribute="leading" constant="16" id="Doi-Dl-2e9"/>
+                                    <constraint firstItem="WU3-1Z-Fps" firstAttribute="top" secondItem="t1o-2i-dMY" secondAttribute="bottom" constant="16" id="GaJ-G9-IjR"/>
+                                    <constraint firstAttribute="bottom" secondItem="ddW-Fp-MCu" secondAttribute="bottom" constant="90.666666666666686" id="IJ5-3D-Ub9"/>
+                                    <constraint firstItem="ddW-Fp-MCu" firstAttribute="leading" secondItem="MZK-cp-eJz" secondAttribute="leading" constant="47" id="Vkk-DT-MPO"/>
+                                    <constraint firstItem="WU3-1Z-Fps" firstAttribute="leading" secondItem="MZK-cp-eJz" secondAttribute="leading" constant="47" id="Y2W-Z1-hru"/>
+                                    <constraint firstItem="ddW-Fp-MCu" firstAttribute="top" secondItem="h4D-SS-2RG" secondAttribute="bottom" constant="25" id="bxc-AY-IkS"/>
+                                    <constraint firstAttribute="trailing" secondItem="ddW-Fp-MCu" secondAttribute="trailing" constant="51.666666666666686" id="cGA-wW-e45"/>
+                                    <constraint firstAttribute="trailing" secondItem="t1o-2i-dMY" secondAttribute="trailing" constant="20" id="eQC-yn-1Hs"/>
+                                    <constraint firstItem="h4D-SS-2RG" firstAttribute="top" secondItem="WU3-1Z-Fps" secondAttribute="bottom" constant="8" symbolic="YES" id="gHO-Jr-SX0"/>
+                                    <constraint firstAttribute="trailing" secondItem="WU3-1Z-Fps" secondAttribute="trailing" constant="52" id="kGj-sB-KgN"/>
+                                    <constraint firstItem="h4D-SS-2RG" firstAttribute="leading" secondItem="MZK-cp-eJz" secondAttribute="leading" constant="47" id="rIY-BB-4Ik"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SDU-zp-7Ql"/>
+                        <color key="backgroundColor" red="0.98047763109999997" green="0.97616833449999996" blue="0.99215894940000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="MZK-cp-eJz" firstAttribute="leading" secondItem="SDU-zp-7Ql" secondAttribute="leading" constant="14" id="ClI-9e-Ldh"/>
+                            <constraint firstItem="MZK-cp-eJz" firstAttribute="top" secondItem="SDU-zp-7Ql" secondAttribute="top" constant="94" id="dET-ol-LJI"/>
+                            <constraint firstItem="SDU-zp-7Ql" firstAttribute="bottom" secondItem="MZK-cp-eJz" secondAttribute="bottom" constant="151" id="ffB-7H-LiF"/>
+                            <constraint firstItem="SDU-zp-7Ql" firstAttribute="trailing" secondItem="MZK-cp-eJz" secondAttribute="trailing" constant="14" id="mb1-wB-897"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fAT-yT-YuP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htE-CO-cOU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4683" y="-873"/>
+        </scene>
+        <!--Achievement-->
+        <scene sceneID="Xv1-z8-T6c">
+            <objects>
+                <collectionViewController title="UICollectionViewController" id="Mj5-2j-0p2" userLabel="Achievement" customClass="AchievementsCollectionViewController" customModule="ZenYoga" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="vA2-Pp-uvd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="K2v-td-7gG">
+                            <size key="itemSize" width="108" height="135"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="AchievementsCell" id="Q1B-kt-tPL" customClass="AchievementsCell" customModule="ZenYoga" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="108" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="THa-eh-AtA">
+                                    <rect key="frame" x="0.0" y="0.0" width="108" height="135"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                                <color key="backgroundColor" red="0.98047763109999997" green="0.97616833449999996" blue="0.99215894940000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="customSize" width="108" height="135"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Mj5-2j-0p2" id="j8a-sn-4Pi"/>
+                            <outlet property="delegate" destination="Mj5-2j-0p2" id="EnU-YK-rRa"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Your achievements" id="YDa-pB-1RU"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBs-Zo-eL4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3115.9420289855075" y="577.90178571428567"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="ywl-Ns-1fq">
+            <objects>
+                <tableViewController title="Notes" id="Mzb-xr-X66" customClass="NotesTableViewController" customModule="ZenYoga" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Zyv-2k-DcS" customClass="Note">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97966903449999998" green="0.97658640149999998" blue="0.9933385253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.97966903449999998" green="0.97658640149999998" blue="0.9933385253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotesCell" rowHeight="50" id="a5M-0r-yc3">
+                                <rect key="frame" x="0.0" y="50" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a5M-0r-yc3" id="azG-4C-csr">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Mzb-xr-X66" id="jCi-ps-Ff1"/>
+                            <outlet property="delegate" destination="Mzb-xr-X66" id="Wwx-Zx-Xse"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Your notes" id="fAp-3O-d4y">
+                        <barButtonItem key="rightBarButtonItem" image="note.text.badge.plus" catalog="system" style="plain" id="QKG-h1-Fd0">
+                            <connections>
+                                <action selector="addNewNoteAction:" destination="Mzb-xr-X66" id="l8V-VG-qGM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X8T-oa-twA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3116" y="-151"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cXK-ZQ-qgz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="weN-mu-4ib" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="pencil.and.list.clipboard" catalog="system" id="0qW-eB-gdc">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eAl-53-vTT">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Mzb-xr-X66" kind="relationship" relationship="rootViewController" id="MVY-OZ-1KY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lc3-VX-5Mc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2367" y="-151"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C7g-kn-Eyg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BoX-M8-M3c" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="square.grid.3x1.below.line.grid.1x2" catalog="system" id="OMF-w4-IIE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eK8-zp-Brk">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gOq-k0-4HW" kind="relationship" relationship="rootViewController" id="j86-sU-aNa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M7F-l3-GEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2366.666666666667" y="-873.21428571428567"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="Rfd-uQ-bTC">
+            <objects>
+                <viewController id="9nP-r5-C4Q" customClass="SettingViewController" customModule="ZenYoga" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TIk-CR-lpm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alo-YF-WTj">
+                                <rect key="frame" x="170" y="118" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Exit"/>
+                                <connections>
+                                    <action selector="exit:" destination="9nP-r5-C4Q" eventType="touchUpInside" id="Kp7-Ol-c7C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YvZ-qi-nq9"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="alo-YF-WTj" firstAttribute="leading" secondItem="YvZ-qi-nq9" secondAttribute="leading" constant="170" id="OQ6-gA-4Oy"/>
+                            <constraint firstItem="alo-YF-WTj" firstAttribute="top" secondItem="YvZ-qi-nq9" secondAttribute="top" constant="70" id="asP-oU-9j8"/>
+                            <constraint firstItem="YvZ-qi-nq9" firstAttribute="trailing" secondItem="alo-YF-WTj" secondAttribute="trailing" constant="169" id="g6Z-Oq-6ov"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="gearshape" catalog="system" id="fbD-35-ivt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxf-4I-FrX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832" y="578"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Kyk-hQ-vS5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nqe-0P-EVF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="star.square.on.square" catalog="system" id="FIF-uH-T8g">
+                        <color key="badgeColor" red="0.97966903449999998" green="0.97658640149999998" blue="0.9933385253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4bf-rp-OPB">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Mj5-2j-0p2" kind="relationship" relationship="rootViewController" id="GMx-Ue-RZB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYH-ZM-bUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2367" y="578"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="note.text.badge.plus" catalog="system" width="128" height="109"/>
+        <image name="pencil.and.list.clipboard" catalog="system" width="114" height="128"/>
+        <image name="square.grid.3x1.below.line.grid.1x2" catalog="system" width="128" height="114"/>
+        <image name="star.square.on.square" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
