@@ -9,29 +9,24 @@ import Foundation
 import Firebase
 
 class RegistrationViewModel {
-    var ref: DatabaseReference // Removed the implicitly unwrapped optional
-    var email: String = "" // Initialize with an empty string to avoid nil value
-    var password: String = "" // Initialize with an empty string to avoid nil value
-
-    init() {
-        ref = Database.database().reference() // Initialize the ref with a DatabaseReference
-    }
+    var email: String?
+    var password: String?
     
-    func createUser(email: String, password: String, completion: @escaping (Error?) -> Void, successHandler: @escaping () -> Void) {
-        guard !email.isEmpty, !password.isEmpty else {
-            completion(NSError(domain: "", code: 400, userInfo: [NSLocalizedDescriptionKey: "Email or password is empty"]))
+    func register(completion: @escaping (Error?) -> Void) {
+        guard let email = email, !email.isEmpty,
+              let password = password, !password.isEmpty
+        else {
+            completion(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Information is incorrect"]))
             return
         }
         
-        Auth.auth().createUser(withEmail: email, password: password) { user, error in
-            if let error = error {
-                completion(error)
-            } else if let user = user {
-                let userRef = self.ref.child(user.user.uid)
-                userRef.setValue(["email": user.user.email])
-                successHandler()
-                completion(nil)
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if let newUser = authResult?.user {
+                let userReference = Database.database().reference(withPath: "users").child(newUser.uid)
+                userReference.setValue(["email": newUser.email])
             }
+            completion(error)
         }
     }
+    
 }
