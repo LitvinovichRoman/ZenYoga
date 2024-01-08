@@ -7,8 +7,11 @@
 
 import Foundation
 import Firebase
+import FirebaseDatabaseInternal
 
 class RegistrationViewModel {
+    
+    // MARK: - Properties
     var email: String?
     var password: String?
     

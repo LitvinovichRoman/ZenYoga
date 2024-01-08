@@ -7,14 +7,15 @@
 
 import Foundation
 import Firebase
+import FirebaseDatabaseInternal
 
 // MARK: - Protocol
 protocol NotesViewModelDelegate: AnyObject {
     func notesDidUpdate()
 }
 
-// MARK: - Class
 class NotesViewModel {
+    
     // MARK: - Properties
     var user: User
     var notes = [Note]()
@@ -50,12 +51,6 @@ class NotesViewModel {
         noteRef.setValue(note.convertToDictionary())
     }
 
-    // MARK: - Toggling Note Completion
-    func toggleNoteCompletion(at indexPath: IndexPath) {
-        let note = notes[indexPath.row]
-        let isComplete = !note.completed
-        note.ref.updateChildValues(["completed": isComplete])
-    }
 
     // MARK: - Deleting a Note
     func deleteNote(at indexPath: IndexPath) {

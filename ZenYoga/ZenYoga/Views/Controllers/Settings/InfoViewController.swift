@@ -1,5 +1,5 @@
 //
-//  SettingViewController.swift
+//  InfoViewController.swift
 //  ZenYoga
 //
 //  Created by Roman Litvinovich on 05/12/2023.
@@ -7,14 +7,16 @@
 
 import Firebase
 import UIKit
+import SafariServices
 
-class SettingViewController: UIViewController {
-
+class InfoViewController: UIViewController {
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-
+    //MARK: - Actions
     @IBAction func exit(_ sender: UIButton) {
         do {
             try Auth.auth().signOut()
@@ -26,6 +28,14 @@ class SettingViewController: UIViewController {
                login.modalPresentationStyle = .fullScreen
                self.present(login, animated: true, completion: nil)
            }
+    }
+    
+    
+    @IBAction func infoButton(_ sender: UIButton) {
+        if let url = URL(string: "https://github.com/LitvinovichRoman/ZenYoga") {
+                let safariVC = SFSafariViewController(url: url)
+                present(safariVC, animated: true, completion: nil)
+            }
     }
     
 

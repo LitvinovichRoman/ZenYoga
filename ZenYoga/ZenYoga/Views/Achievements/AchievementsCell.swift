@@ -9,6 +9,7 @@ import UIKit
 
 class AchievementsCell: UICollectionViewCell {
     
+    // MARK: - Outlet
     @IBOutlet weak var achievementsImage: UIImageView!
     
     func setImage(_ image: UIImage) {

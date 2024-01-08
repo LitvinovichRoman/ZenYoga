@@ -28,7 +28,6 @@ class BaseAuthController: UIViewController, UITextFieldDelegate, UIGestureRecogn
         })
     }
     
-    //MARK: - Public Methods
     func displayWarning(withText text: String) {
         let alertController = UIAlertController(title: "Warning", message: text, preferredStyle: .alert)
         let cancel = UIAlertAction(title: "Back", style: .cancel)

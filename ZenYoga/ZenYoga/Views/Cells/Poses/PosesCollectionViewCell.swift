@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PosesCollectionViewCell: UICollectionViewCell {
-
+    
+    // MARK: - Outlet
     @IBOutlet weak var posesImage: UIImageView!
     
-    func setImage(_ image: UIImage) {
-            posesImage.image = image
-        }
-
+    func setImage(with url: URL) {
+        posesImage.kf.setImage(with: url)
+    }
 }

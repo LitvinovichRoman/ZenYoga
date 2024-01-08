@@ -9,9 +9,11 @@ import UIKit
 
 class AchievementsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    // MARK: - Properties
     private let reuseIdentifier = "AchievementsCell"
     private var viewModel = AchievementsViewModel()
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBarAppearance()
@@ -24,7 +26,6 @@ class AchievementsCollectionViewController: UICollectionViewController, UICollec
     }
 
     // MARK: - Private Functions
-    
     private func setupNavigationBarAppearance() {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "ChalkboardSE-Regular", size: 23)!, NSAttributedString.Key.foregroundColor: UIColor.black]
     }
@@ -48,18 +49,4 @@ class AchievementsCollectionViewController: UICollectionViewController, UICollec
         return cell
     }
 
-    // MARK: - Private Image Loading
-    
-    private func loadImages() {
-        FirebaseStorageService.shared.retrieveAchievementsImages { [weak self] (retrievedImages, error) in
-            if let error = error {
-                print("Error retrieving images: \(error.localizedDescription)")
-            } else if let retrievedImages = retrievedImages {
-                self?.viewModel.images = retrievedImages
-                DispatchQueue.main.async {
-                    self?.collectionView.reloadData()
-                }
-            }
-        }
-    }
 }

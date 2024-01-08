@@ -56,10 +56,6 @@ class NotesTableViewController: UITableViewController, NotesViewModelDelegate {
     }
 
     // MARK: - TableView Delegate
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.toggleNoteCompletion(at: indexPath)
-    }
-
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
         viewModel.deleteNote(at: indexPath)

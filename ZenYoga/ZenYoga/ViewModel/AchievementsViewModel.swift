@@ -33,4 +33,5 @@ class AchievementsViewModel {
     func image(at index: Int) -> UIImage {
         return images[index]
     }
+    
 }
