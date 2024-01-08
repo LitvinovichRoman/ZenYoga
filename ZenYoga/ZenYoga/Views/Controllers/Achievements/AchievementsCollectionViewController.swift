@@ -13,7 +13,7 @@ class AchievementsCollectionViewController: UICollectionViewController, UICollec
     private let reuseIdentifier = "AchievementsCell"
     private var viewModel = AchievementsViewModel()
 
-    // MARK: - Lifecycle
+    // MARK: - Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBarAppearance()

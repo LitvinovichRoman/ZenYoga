@@ -11,7 +11,7 @@ import SafariServices
 
 class InfoViewController: UIViewController {
     
-    //MARK: - Lifecycle
+    // MARK: - Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
     }

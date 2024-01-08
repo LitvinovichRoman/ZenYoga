@@ -20,6 +20,7 @@ class RegistrationViewController: BaseAuthController {
     // MARK: - Properties
     private var viewModel = RegistrationViewModel()
     
+    // MARK: - Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
         

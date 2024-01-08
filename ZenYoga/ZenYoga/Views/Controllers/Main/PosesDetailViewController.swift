@@ -8,7 +8,8 @@
 import UIKit
 
 class PosesDetailViewController: UIViewController {
-
+    
+    // MARK: - Outlets
     @IBOutlet weak var posesImage: UIImageView!
     @IBOutlet weak var timeInPose: UIProgressView!
     @IBOutlet weak var timerLabel: UILabel!
@@ -16,10 +17,12 @@ class PosesDetailViewController: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var subView: UIView!
     
+    // MARK: - Properties
     var imageURL: URL?
     var timer: Timer?
     var timeLeft: Int = 40
-
+    
+    // MARK: - Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -48,9 +51,9 @@ class PosesDetailViewController: UIViewController {
     @objc func stopTimer() {
         timer?.invalidate()
         timer = nil
-        timeLeft = 60
+        timeLeft = 40
         timeInPose.setProgress(0, animated: false)
-        timerLabel.text = "1:00"
+        timerLabel.text = "00:40"
     }
     
     
@@ -59,7 +62,6 @@ class PosesDetailViewController: UIViewController {
         stopButton.capsuleCornerRadius()
         subView.cornerRadius()
     }
-    
 }
 
 extension UIImageView {

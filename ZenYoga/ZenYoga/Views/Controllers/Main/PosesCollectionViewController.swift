@@ -9,9 +9,11 @@ import UIKit
 
 class PosesCollectionViewController: UICollectionViewController {
     
+    // MARK: - Properties
     private let reuseIdentifier = "PosesCell"
     private var viewModel = PosesViewModel()
-
+    
+    // MARK: - Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBarAppearance()

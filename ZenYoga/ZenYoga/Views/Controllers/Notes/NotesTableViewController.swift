@@ -14,7 +14,7 @@ class NotesTableViewController: UITableViewController, NotesViewModelDelegate {
     // MARK: - Properties
     private var viewModel: NotesViewModel!
 
-    // MARK: - Lifecycle
+    // MARK: - Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes =
