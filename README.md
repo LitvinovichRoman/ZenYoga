@@ -1,5 +1,11 @@
 # ZenYoga
 
+---
+
+![ZenYoga Image](https://github.com/LitvinovichRoman/ZenYoga/blob/develop/IMG_3253.PNG)
+
+---
+
 ## Features
 
 - **Yoga Poses**: The application pulls yoga poses from Firebase into a collectionView. When you click on a specific pose, it transitions to a screen where the image of the pose, progressView, and a timer to control its execution are displayed.
@@ -14,4 +20,3 @@ The application uses Firebase for authorization via email and password, and also
 ## Data Storage
 
 User information, pose images, and notes are stored in Firebase.
-
