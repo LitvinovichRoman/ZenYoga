@@ -30,7 +30,7 @@ class InfoViewController: UIViewController {
            }
     }
     
-    
+    // Переход к странице  проекта на GitHub
     @IBAction func infoButton(_ sender: UIButton) {
         if let url = URL(string: "https://github.com/LitvinovichRoman/ZenYoga") {
                 let safariVC = SFSafariViewController(url: url)

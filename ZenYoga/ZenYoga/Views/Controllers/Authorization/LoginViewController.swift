@@ -35,6 +35,7 @@ class LoginViewController: BaseAuthController {
     }
     
     // MARK: - Actions
+    // Установка почты и пароля из текстовых полей, вход в систему
     @IBAction private func loginButtonAction() {
         viewModel.email = emailTextField.text
         viewModel.password = passwordTextField.text
@@ -45,6 +46,7 @@ class LoginViewController: BaseAuthController {
         }
     }
     
+    //Переход на сториборд регистрации
     @IBAction private func registrationButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Registration", bundle: nil)
         if let registrationViewController = storyboard.instantiateViewController(withIdentifier: "RegistrationViewController") as? RegistrationViewController {
@@ -53,6 +55,7 @@ class LoginViewController: BaseAuthController {
         }
     }
     
+    //Вход через Google
     @IBAction private func signInWithGoogleButtonAction() {
         signInWithGoogle()
     }

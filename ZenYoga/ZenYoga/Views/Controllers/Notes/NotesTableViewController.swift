@@ -17,10 +17,7 @@ class NotesTableViewController: UITableViewController, NotesViewModelDelegate {
     // MARK: - Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.titleTextAttributes =
-            [NSAttributedString.Key.font: UIFont(name: "ChalkboardSE-Regular", size: 23)!,
-             NSAttributedString.Key.foregroundColor: UIColor.black]
-        guard let currentUser = Auth.auth().currentUser else { return }
+        guard let currentUser = Auth.auth().currentUser else { return } // Получение текущего пользователя
         let user = User(user: currentUser)
         viewModel = NotesViewModel(user: user)
         viewModel.delegate = self
@@ -53,6 +50,30 @@ class NotesTableViewController: UITableViewController, NotesViewModelDelegate {
         cell.textLabel?.text = currentNote.title
         toggleCompletion(cell, isCompleted: currentNote.completed)
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let editAction = UIContextualAction(style: .normal, title: "Edit") { [weak self] (action, view, completionHandler) in
+            guard let self = self else { return }
+            let note = self.viewModel.notes[indexPath.row]
+            let alertController = UIAlertController(title: "Edit Note", message: "", preferredStyle: .alert)
+            alertController.addTextField { textField in
+                textField.text = note.title
+            }
+            let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+                if let newText = alertController.textFields?.first?.text {
+                    note.ref.updateChildValues(["title": newText])
+                }
+            }
+            alertController.addAction(saveAction)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true)
+            completionHandler(true)
+        }
+        editAction.backgroundColor = .blue
+        let configuration = UISwipeActionsConfiguration(actions: [editAction])
+        return configuration
     }
 
     // MARK: - TableView Delegate

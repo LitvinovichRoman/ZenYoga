@@ -6,33 +6,33 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PosesCollectionViewController: UICollectionViewController {
-    
+
     // MARK: - Properties
     private let reuseIdentifier = "PosesCell"
     private var viewModel = PosesViewModel()
-    
+
+
     // MARK: - Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBarAppearance()
-        setupCollectionView()
-        viewModel.loadImageURLs { [weak self] in
+
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8) // Отступы
+        
+        setupCollectionView() // Загрузка URL адресов изображений
+        viewModel.loadImageURLs { [weak self] in // Обновление интерфейса в главном потоке
             DispatchQueue.main.async {
-                self?.collectionView.reloadData()
+                self?.collectionView.reloadData() // Обновление данных ячейки
             }
+            
         }
     }
 
     // MARK: - Private Functions
-    
-    private func setupNavigationBarAppearance() {
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "ChalkboardSE-Regular", size: 23)!, NSAttributedString.Key.foregroundColor: UIColor.black]
-    }
-    
     private func setupCollectionView() {
-        collectionView.register(UINib(nibName: "PosesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.register(UINib(nibName: "PosesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier) // Регистрация ячейки коллекции для повторного использования
     }
 
     // MARK: - UICollectionViewDataSource
@@ -44,16 +44,26 @@ class PosesCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PosesCollectionViewCell
         
+        // Радиус и цвет для обводки ячеек
+        cell.layer.cornerRadius = 20
+        cell.layer.borderWidth = 1
+        cell.layer.borderColor = UIColor(named: "cellBorderColor")?.cgColor
+
         let imageURL = viewModel.imageURL(at: indexPath.item)
-        cell.setImage(with: imageURL)
-        
+        cell.setImage(with: imageURL) // Установка изображения в ячейку
+
         return cell
     }
-
+    
+    // Переход при нажатии на выбраную ячеку 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let detailVC = storyboard.instantiateViewController(withIdentifier: "PosesDetailViewController") as! PosesDetailViewController
-            detailVC.imageURL = viewModel.imageURL(at: indexPath.item)
-            self.navigationController?.pushViewController(detailVC, animated: true)
-        }
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "PosesDetailViewController") as! PosesDetailViewController
+        let detailViewModel = PosesDetailViewModel()
+        detailViewModel.imageURL.value = viewModel.imageURL(at: indexPath.item)
+        detailVC.viewModel = detailViewModel
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
+
+
 }

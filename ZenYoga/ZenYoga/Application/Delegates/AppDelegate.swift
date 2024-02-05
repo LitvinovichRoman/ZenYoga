@@ -19,8 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         if #available(iOS 13.0, *) {
-            window?.overrideUserInterfaceStyle = .light
+            window?.overrideUserInterfaceStyle = .light // Установка только светлой темы на весь проект 
         }
+        
+        
+        let viewModel = PosesViewModel()
+            viewModel.loadImageURLs {}
+
         
         return true
     }

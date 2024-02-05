@@ -18,61 +18,41 @@ class PosesDetailViewController: UIViewController {
     @IBOutlet weak var subView: UIView!
     
     // MARK: - Properties
-    var imageURL: URL?
-    var timer: Timer?
-    var timeLeft: Int = 40
+    var viewModel: PosesDetailViewModel!
     
     // MARK: - Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        if let imageURL = imageURL { posesImage.load(url: imageURL) }
-        startButton.addTarget(self, action: #selector(startTimer), for: .touchUpInside)
-        stopButton.addTarget(self, action: #selector(stopTimer), for: .touchUpInside)
-
+        bindViewModel()
     }
     
-
-    @objc func startTimer() {
-        timer?.invalidate()
-        timeLeft = 40 // 1 minute
-        timeInPose.setProgress(0, animated: false)
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-            self.timeLeft -= 1
-            let progress = Float(40 - self.timeLeft) / 40.0
-            self.timeInPose.setProgress(progress, animated: true)
-            self.timerLabel.text = "\(self.timeLeft / 40):\(self.timeLeft % 40)"
-            if self.timeLeft <= 0 {
-                timer.invalidate()
-            }
+    private func bindViewModel() {
+        viewModel.imageURL.bind { [weak self] url in
+            self?.posesImage.load(url: url!)            // Байндинг URL-адреса изображения
         }
+        viewModel.timerText.bind { [weak self] text in  // Загрузка изображения
+            self?.timerLabel.text = text                // Обновление текста метки таймера
+        }
+        viewModel.progress.bind { [weak self] progress in
+            self?.timeInPose.setProgress(progress, animated: true) // Байндинг и обновление прогресса
+        }
+        startButton.addTarget(self, action: #selector(startTimer), for: .touchUpInside)
+        stopButton.addTarget(self, action: #selector(stopTimer), for: .touchUpInside)
+    }
+    
+    @objc func startTimer() {
+        viewModel.startTimer()
     }
 
     @objc func stopTimer() {
-        timer?.invalidate()
-        timer = nil
-        timeLeft = 40
-        timeInPose.setProgress(0, animated: false)
-        timerLabel.text = "00:40"
+        viewModel.resetTimer()
     }
-    
     
     private func setupUI() {
         startButton.capsuleCornerRadius()
         stopButton.capsuleCornerRadius()
+        timerLabel.capsuleCornerRadius()
         subView.cornerRadius()
     }
-}
-
-extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url), let image = UIImage(data: data) {
-                DispatchQueue.main.async {
-                    self?.image = image
-                }
-            }
-        }
-    }
-    
 }

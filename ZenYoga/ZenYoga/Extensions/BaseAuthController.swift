@@ -7,18 +7,20 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabaseInternal
+
 
 class BaseAuthController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
     
     //MARK: - Properties
-    var ref: DatabaseReference!
-    var authStateDidChangeListenerHandle: AuthStateDidChangeListenerHandle!
+    var ref: DatabaseReference!  // Ссылка на базу данных Firebase
+    var authStateDidChangeListenerHandle: AuthStateDidChangeListenerHandle! // Обработчик изменения состояния аутентификации
     
     
     //MARK: - Auth Listener
     func authListener() {
-        ref = Database.database().reference(withPath: "users")
-        authStateDidChangeListenerHandle = Auth.auth().addStateDidChangeListener({[weak self] _, user in
+        ref = Database.database().reference(withPath: "users")  // Получение ссылки на раздел "users" в базе данных
+        authStateDidChangeListenerHandle = Auth.auth().addStateDidChangeListener({[weak self] _, user in // Добавление наблюдателя за состоянием аутентификации
             guard let _ = user  else { return }
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let tabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as? MainTabBarController {
@@ -27,7 +29,7 @@ class BaseAuthController: UIViewController, UITextFieldDelegate, UIGestureRecogn
             }
         })
     }
-    
+
     func displayWarning(withText text: String) {
         let alertController = UIAlertController(title: "Warning", message: text, preferredStyle: .alert)
         let cancel = UIAlertAction(title: "Back", style: .cancel)
@@ -36,6 +38,7 @@ class BaseAuthController: UIViewController, UITextFieldDelegate, UIGestureRecogn
     }
     
     //MARK: - Setup Keyboard
+    
     func keyboardObserver(){
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)

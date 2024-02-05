@@ -23,7 +23,6 @@ class RegistrationViewController: BaseAuthController {
     // MARK: - Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
         keyboardObserver()
         authListener()
@@ -33,6 +32,7 @@ class RegistrationViewController: BaseAuthController {
         
     
     // MARK: - Actions
+    // Установка  почты и пароля из текстовых полей 
     @IBAction func registrationButtonAction() {
         viewModel.email = emailTextField.text
         viewModel.password = passwordTextField.text
@@ -43,7 +43,7 @@ class RegistrationViewController: BaseAuthController {
         }
        
     }
-    
+    // Переход на сториборд Login
     @IBAction func backToLoginScreen(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         if let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
