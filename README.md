@@ -1,7 +1,5 @@
 # ZenYoga
 
-ZenYoga is a yoga application written in Swift using UIKit.
-
 ## Features
 
 - **Yoga Poses**: The application pulls yoga poses from Firebase into a collectionView. When you click on a specific pose, it transitions to a screen where the image of the pose, progressView, and a timer to control its execution are displayed.
