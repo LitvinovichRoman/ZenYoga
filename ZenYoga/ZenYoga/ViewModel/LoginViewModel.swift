@@ -9,26 +9,22 @@ import Foundation
 import Firebase
 
 class LoginViewModel {
-    var email: String = ""
-    var password: String = ""
-
-    func signIn(completion: @escaping (Error?) -> Void, successHandler: @escaping () -> Void) {
-        guard !email.isEmpty, !password.isEmpty else {
-            completion(NSError(domain: "", code: 400, userInfo: [NSLocalizedDescriptionKey: "Email or password is empty"]))
+    
+    // MARK: - Properties
+    // Переменные для хранения почты и пароля пользователя
+    var email: String?
+    var password: String?
+    
+    func login(completion: @escaping (Error?) -> Void) {
+        guard let email = email, !email.isEmpty, // Проверка почты на пустоту
+              let password = password, !password.isEmpty //Проверка пароля на пустоту
+        else {
+            completion(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Info is incorrect"])) // Если информация некорректна, возвращаем ошибку
             return
         }
-            
-        Auth.auth().signIn(withEmail: email, password: password) { user, error in
-            if let error = error {
-                completion(error)
-            } else if user != nil {
-                successHandler()
-                completion(nil)
-            } else {
-                completion(NSError(domain: "", code: 404, userInfo: [NSLocalizedDescriptionKey: "No such user"]))
-            }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { _, error in // Вход в Firebase с использованием электронной почты и пароля
+            completion(error)
         }
     }
 }
-
-
