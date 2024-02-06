@@ -1,6 +1,10 @@
 # ZenYoga
 
-ZenYoga is a yoga application written in Swift using UIKit.
+---
+
+![ZenYoga Image](https://github.com/LitvinovichRoman/ZenYoga/blob/develop/IMG_3253.PNG)
+
+---
 
 ## Features
 
@@ -16,4 +20,3 @@ The application uses Firebase for authorization via email and password, and also
 ## Data Storage
 
 User information, pose images, and notes are stored in Firebase.
-
