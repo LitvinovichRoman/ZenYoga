@@ -50,7 +50,6 @@
 		62760BEE2B1F9112002A1BF2 /* PosesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62760BEC2B1F9112002A1BF2 /* PosesCollectionViewCell.xib */; };
 		62760BEF2B1F9112002A1BF2 /* PosesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62760BED2B1F9112002A1BF2 /* PosesCollectionViewCell.swift */; };
 		6279E24F2B66A31E008CC124 /* BreathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6279E24E2B66A31E008CC124 /* BreathViewController.swift */; };
-		6279E2512B66AAD1008CC124 /* breathHeart.json in Resources */ = {isa = PBXBuildFile; fileRef = 6279E2502B66AAD1008CC124 /* breathHeart.json */; };
 		627D80D62B0D560100331E0F /* PosesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627D80D52B0D560100331E0F /* PosesCollectionViewController.swift */; };
 		627D80D82B0D565000331E0F /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627D80D72B0D565000331E0F /* NotesTableViewController.swift */; };
 		627D80DC2B0D56CD00331E0F /* PosesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627D80DB2B0D56CD00331E0F /* PosesDetailViewController.swift */; };
@@ -63,7 +62,8 @@
 		628CE8402B1FA08200460A92 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628CE83F2B1FA08200460A92 /* InfoViewController.swift */; };
 		629221332B71495F0053D5CD /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629221322B71495F0053D5CD /* Bindable.swift */; };
 		629CF9D52B1397280009261D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629CF9D42B1397280009261D /* MainTabBarController.swift */; };
-		62CE88E22B702B8600ECC8B7 /* flower.json in Resources */ = {isa = PBXBuildFile; fileRef = 62CE88E12B702B8600ECC8B7 /* flower.json */; };
+		62AF6F9A2B72C3550033691E /* breathHeart.json in Resources */ = {isa = PBXBuildFile; fileRef = 62AF6F992B72C3550033691E /* breathHeart.json */; };
+		62AF6F9C2B72C3A60033691E /* image0.png in Resources */ = {isa = PBXBuildFile; fileRef = 62AF6F9B2B72C3A60033691E /* image0.png */; };
 		62EB93C02B0D3A360052EF6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EB93BF2B0D3A360052EF6F /* AppDelegate.swift */; };
 		62EB93C22B0D3A360052EF6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EB93C12B0D3A360052EF6F /* SceneDelegate.swift */; };
 		62EB93C92B0D3A390052EF6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62EB93C82B0D3A390052EF6F /* Assets.xcassets */; };
@@ -86,7 +86,6 @@
 		62760BEC2B1F9112002A1BF2 /* PosesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PosesCollectionViewCell.xib; sourceTree = "<group>"; };
 		62760BED2B1F9112002A1BF2 /* PosesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosesCollectionViewCell.swift; sourceTree = "<group>"; };
 		6279E24E2B66A31E008CC124 /* BreathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathViewController.swift; sourceTree = "<group>"; };
-		6279E2502B66AAD1008CC124 /* breathHeart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = breathHeart.json; path = ../../../../../../../Downloads/breathHeart.json; sourceTree = "<group>"; };
 		627D80D52B0D560100331E0F /* PosesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosesCollectionViewController.swift; sourceTree = "<group>"; };
 		627D80D72B0D565000331E0F /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		627D80DB2B0D56CD00331E0F /* PosesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosesDetailViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +97,8 @@
 		628CE83F2B1FA08200460A92 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		629221322B71495F0053D5CD /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		629CF9D42B1397280009261D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		62CE88E12B702B8600ECC8B7 /* flower.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = flower.json; path = ../../../../../../../Downloads/flower.json; sourceTree = "<group>"; };
+		62AF6F992B72C3550033691E /* breathHeart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = breathHeart.json; sourceTree = "<group>"; };
+		62AF6F9B2B72C3A60033691E /* image0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image0.png; sourceTree = "<group>"; };
 		62EB93BC2B0D3A360052EF6F /* ZenYoga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenYoga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62EB93BF2B0D3A360052EF6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62EB93C12B0D3A360052EF6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -316,6 +316,7 @@
 		62EB93DB2B0D3BDD0052EF6F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				62AF6F9B2B72C3A60033691E /* image0.png */,
 				62EB93DD2B0D3BFE0052EF6F /* Animation */,
 				62EB93C82B0D3A390052EF6F /* Assets.xcassets */,
 			);
@@ -325,8 +326,7 @@
 		62EB93DD2B0D3BFE0052EF6F /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				62CE88E12B702B8600ECC8B7 /* flower.json */,
-				6279E2502B66AAD1008CC124 /* breathHeart.json */,
+				62AF6F992B72C3550033691E /* breathHeart.json */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -458,12 +458,12 @@
 			files = (
 				62760BDC2B1F8E42002A1BF2 /* Login.storyboard in Resources */,
 				62191F2E2B13D3D7009ED29A /* GoogleService-Info.plist in Resources */,
+				62AF6F9A2B72C3550033691E /* breathHeart.json in Resources */,
 				62760BE42B1F8E62002A1BF2 /* Main.storyboard in Resources */,
-				6279E2512B66AAD1008CC124 /* breathHeart.json in Resources */,
 				62EB93C92B0D3A390052EF6F /* Assets.xcassets in Resources */,
 				6245D7482B20DA99009C979D /* Registration.storyboard in Resources */,
 				62760BEE2B1F9112002A1BF2 /* PosesCollectionViewCell.xib in Resources */,
-				62CE88E22B702B8600ECC8B7 /* flower.json in Resources */,
+				62AF6F9C2B72C3A60033691E /* image0.png in Resources */,
 				62760BE32B1F8E62002A1BF2 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

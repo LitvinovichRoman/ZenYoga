@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,20 +12,20 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="L2O-IS-Wsn">
-                                <rect key="frame" x="34" y="337" width="345" height="320"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image0.png" translatesAutoresizingMaskIntoConstraints="NO" id="L2O-IS-Wsn">
+                                <rect key="frame" x="16" y="44" width="341" height="720"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay calm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RC2-qL-5Qw">
-                                <rect key="frame" x="16" y="665" width="382" height="39"/>
+                                <rect key="frame" x="16" y="697" width="343" height="39"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZenYoga" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DA-HI-hPN">
-                                <rect key="frame" x="16" y="250" width="382" height="52"/>
+                                <rect key="frame" x="16" y="109" width="343" height="52"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,23 +36,23 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RC2-qL-5Qw" secondAttribute="trailing" constant="16" id="0a1-dO-iiG"/>
                             <constraint firstItem="3DA-HI-hPN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1EJ-Pp-QsR"/>
-                            <constraint firstItem="L2O-IS-Wsn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="289" id="FJf-DW-n9Z"/>
-                            <constraint firstItem="L2O-IS-Wsn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="HzY-Jb-2Yn"/>
+                            <constraint firstItem="L2O-IS-Wsn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-6" id="FJf-DW-n9Z"/>
+                            <constraint firstItem="L2O-IS-Wsn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HzY-Jb-2Yn"/>
                             <constraint firstItem="RC2-qL-5Qw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="J31-3o-8T8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3DA-HI-hPN" secondAttribute="trailing" constant="16" id="TRL-wU-dDl"/>
-                            <constraint firstItem="3DA-HI-hPN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="202" id="jP0-oc-IRx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L2O-IS-Wsn" secondAttribute="trailing" constant="35" id="par-dp-dRa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="L2O-IS-Wsn" secondAttribute="bottom" constant="205" id="vXK-ba-Int"/>
-                            <constraint firstItem="RC2-qL-5Qw" firstAttribute="top" secondItem="L2O-IS-Wsn" secondAttribute="bottom" constant="8" id="zsR-ea-38d"/>
+                            <constraint firstItem="3DA-HI-hPN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="jP0-oc-IRx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L2O-IS-Wsn" secondAttribute="trailing" constant="18" id="par-dp-dRa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="L2O-IS-Wsn" secondAttribute="bottom" constant="14" id="vXK-ba-Int"/>
+                            <constraint firstItem="RC2-qL-5Qw" firstAttribute="top" secondItem="L2O-IS-Wsn" secondAttribute="bottom" constant="-67" id="zsR-ea-38d"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
+            <point key="canvasLocation" x="50.625" y="373.94366197183098"/>
         </scene>
     </scenes>
     <resources>
-        <image name="2" width="1804" height="1106"/>
+        <image name="image0.png" width="525.5" height="817"/>
     </resources>
 </document>
