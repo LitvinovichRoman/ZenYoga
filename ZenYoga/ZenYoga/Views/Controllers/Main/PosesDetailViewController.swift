@@ -18,7 +18,7 @@ class PosesDetailViewController: UIViewController {
     @IBOutlet weak var subView: UIView!
     
     // MARK: - Properties
-    var viewModel: PosesDetailViewModel!
+    var viewModel = PosesDetailViewModel()
     
     // MARK: - Life Cicle
     override func viewDidLoad() {

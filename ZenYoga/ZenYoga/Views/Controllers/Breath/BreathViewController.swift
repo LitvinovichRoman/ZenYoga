@@ -9,6 +9,7 @@ import UIKit
 import Lottie
 
 class BreathViewController: UIViewController {
+    // MARK: - Properties
     @IBOutlet weak var animationView: UIView!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var breathingStatusLabel: UILabel!
@@ -17,77 +18,52 @@ class BreathViewController: UIViewController {
     @IBOutlet weak var progressView: UIProgressView!
     
     let lottieAnimationView = LottieAnimationView()
+    var viewModel = BreathViewModel()
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupAnimation()
+        bindViewModel()
+        NotificationCenter.default.addObserver(self, selector: #selector(timerFinished), name: NSNotification.Name("timerFinished"), object: nil)
     }
     
-    var timer: Timer?
-    var totalTime = 180.0
-    var timeLeft: Double = 180.0 {
-        didSet {
-            updateTimerLabel()
-            updateProgressView()
+    // MARK: - ViewModel binding
+    private func bindViewModel() {
+        viewModel.timerText.bind { [weak self] text in
+            print("Binding timerText: \(text)")
+            self?.timerLabel.text = text
         }
+        viewModel.progress.bind { [weak self] progress in
+            self?.progressView.setProgress(progress, animated: true)
+        }
+        viewModel.breathStatus.bind { [weak self] status in
+            self?.breathingStatusLabel.text = status
+        }
+        viewModel.breathStatusColor.bind { [weak self] color in
+            self?.breathingStatusLabel.backgroundColor = color
+        }
+        startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
+        stopButton.addTarget(self, action: #selector(stopButtonTapped), for: .touchUpInside)
     }
     
-    var breathStatus = false { didSet { updateBreathingStatus()} }
-    
+    // MARK: - Event processing
     @objc func startButtonTapped() {
         lottieAnimationView.play()
-        startTimer()
-        breathingStatusLabel.text = "Get ready"
+        viewModel.startTimer()
     }
     
-    @objc func stopButtonTapped() { stopTimer() }
-
-    private func updateBreathingStatus() {
-        breathingStatusLabel.text = breathStatus ? "Inhale" : "Exhale"
-        breathingStatusLabel.backgroundColor = breathStatus ? #colorLiteral(red: 0.4018470645, green: 0.552862525, blue: 0.3434202969, alpha: 0.8214150773) : #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+    @objc func stopButtonTapped() {
+        lottieAnimationView.pause()
+        viewModel.resetTimer()
     }
     
-    private func stopTimer() {
-        lottieAnimationView.play()
-        timer?.invalidate()
-        lottieAnimationView.animation = .named("breathHeart")
-        timeLeft = totalTime
-        updateTimerLabel()
-        progressView.progress = 0.0
-        breathingStatusLabel.text = nil
-        breathingStatusLabel.backgroundColor = nil
+    @objc func timerFinished() {
+        lottieAnimationView.pause()
     }
     
-    private func startTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-            self.timeLeft -= 1
-            
-            if Int(self.timeLeft) % 6 == 0 {
-                self.breathStatus.toggle()
-            }
-            
-            if self.timeLeft <= 0 {
-                timer.invalidate()
-                self.lottieAnimationView.pause()
-                self.startButton.setTitle("Start", for: .normal)
-                self.stopTimer()
-            }
-        }
-    }
-    
-    private func updateTimerLabel() {
-        let minutes = String(format: "%02i", Int(timeLeft) / 60)
-        let seconds = String(format: "%02i", Int(timeLeft) % 60)
-        timerLabel.text = "\(minutes):\(seconds)"
-    }
-    private func updateProgressView() {
-        let progress = Float(totalTime - timeLeft) / Float(totalTime)
-        progressView.progress = progress
-    }
-    
-   
-    
+    // MARK: - SetupUI and Lottie animation
     private func setupUI() {
         startButton.capsuleCornerRadius()
         stopButton.capsuleCornerRadius()
@@ -115,6 +91,5 @@ class BreathViewController: UIViewController {
         ])
     }
     
-   
 }
 

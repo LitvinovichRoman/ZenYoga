@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		620253402B75115A0075F6DC /* BreathViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6202533F2B75115A0075F6DC /* BreathViewModel.swift */; };
 		62191F2E2B13D3D7009ED29A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62191F2D2B13D3D6009ED29A /* GoogleService-Info.plist */; };
 		62191F312B13D500009ED29A /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 62191F302B13D500009ED29A /* GoogleSignIn */; };
 		62191F332B13D500009ED29A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 62191F322B13D500009ED29A /* GoogleSignInSwift */; };
@@ -73,6 +74,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6202533F2B75115A0075F6DC /* BreathViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathViewModel.swift; sourceTree = "<group>"; };
 		62191F2D2B13D3D6009ED29A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6245D7472B20DA99009C979D /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		625729E62B17452B0011AE95 /* FirebaseStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageService.swift; sourceTree = "<group>"; };
@@ -151,6 +153,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		620253412B7526CE0075F6DC /* Breath */ = {
+			isa = PBXGroup;
+			children = (
+				6279E24E2B66A31E008CC124 /* BreathViewController.swift */,
+			);
+			path = Breath;
+			sourceTree = "<group>";
+		};
 		62572A162B1CBBE10011AE95 /* Poses */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +184,6 @@
 				629CF9D42B1397280009261D /* MainTabBarController.swift */,
 				627D80D52B0D560100331E0F /* PosesCollectionViewController.swift */,
 				627D80DB2B0D56CD00331E0F /* PosesDetailViewController.swift */,
-				6279E24E2B66A31E008CC124 /* BreathViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -279,6 +288,7 @@
 				62760BE52B1F8E90002A1BF2 /* Authorization */,
 				62572A242B1CBED10011AE95 /* Main */,
 				62572A212B1CBE5F0011AE95 /* Notes */,
+				620253412B7526CE0075F6DC /* Breath */,
 				62AB8EC22B1F9CF500EF11AB /* Info */,
 			);
 			path = Controllers;
@@ -301,6 +311,7 @@
 				627D80E72B0D58DD00331E0F /* PosesViewModel.swift */,
 				627D80E92B0D58F000331E0F /* NotesViewModel.swift */,
 				627D80ED2B0D591E00331E0F /* PosesDetailViewModel.swift */,
+				6202533F2B75115A0075F6DC /* BreathViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -493,6 +504,7 @@
 				62760BEF2B1F9112002A1BF2 /* PosesCollectionViewCell.swift in Sources */,
 				627D80D62B0D560100331E0F /* PosesCollectionViewController.swift in Sources */,
 				62EB93C02B0D3A360052EF6F /* AppDelegate.swift in Sources */,
+				620253402B75115A0075F6DC /* BreathViewModel.swift in Sources */,
 				629CF9D52B1397280009261D /* MainTabBarController.swift in Sources */,
 				6279E24F2B66A31E008CC124 /* BreathViewController.swift in Sources */,
 				62EB93C22B0D3A360052EF6F /* SceneDelegate.swift in Sources */,
